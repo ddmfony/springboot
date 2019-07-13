@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yktj.myinterview.mapper.TlogMapper">
+
+    <select id="getTlogById" resultType="com.yktj.myinterview.entities.Tlog">
+        SELECT * FROM tlog WHERE id=#{id}
+    </select>
+
+    <select id="getTlogByKey" resultType="com.yktj.myinterview.entities.Tlog">
+        SELECT * FROM tlog WHERE date_format(operation_time,'%Y-%m-%d')=#{key} ORDER BY id
+    </select>
+
+</mapper>
