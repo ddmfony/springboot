@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.yktj.myinterview.MyInterviewApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.929 s - in com.yktj.myinterview.MyInterviewApplicationTests
