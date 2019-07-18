@@ -8,10 +8,10 @@ Springboot+Redis+Mybatis
 
 
 #### 软件功能
-1、每天凌晨将日志操作表前一天的日志信息生成excel保存并提供下载。
-2、将下载后的以日期yyyy-MM-dd作为key，总数量和下载地址作为value保存在redis。
-3、后台通过redis可以查询每日的日志操作信息是否已存在。
-4、可以通过redis将已存在的key，下载所需的excel文件。
+1. 每天凌晨将日志操作表前一天的日志信息生成excel保存并提供下载。
+2. 将下载后的以日期yyyy-MM-dd作为key，总数量和下载地址作为value保存在redis。
+3. 后台通过redis可以查询每日的日志操作信息是否已存在。
+4. 可以通过redis将已存在的key，下载所需的excel文件。
 
 
 #### 使用说明
