@@ -1,9 +1,9 @@
-CREATE TABLE TLog (
+CREATE TABLE tlog (
 id int(11) NOT NULL AUTO_INCREMENT COMMENT '日志id' ,
 operation_time datetime NOT NULL COMMENT '操作时间' ,
 type varchar(32) COMMENT '日志类型' ,
-log_status varchar(256) COMMENT '日志内容' ,
-status varchar(8) COMMENT '状态' ,
+content varchar(256) COMMENT '日志内容' ,
+log_status varchar(8) COMMENT '状态' ,
 flag char(1) COMMENT '标志' ,
 PRIMARY KEY (`id`)
 );
@@ -57,4 +57,8 @@ BEGIN
 END $$
 DELIMITER ;
 
-#call pro_gen('2019-07-11',1000)
+#select t.date_key,count(1) from (select date_format(operation_time,'%Y-%m-%d') date_key, a.* from TLog a) t
+group by t.date_key order by date_key
+
+#call pro_gen('2019-07-18',2000);
+
